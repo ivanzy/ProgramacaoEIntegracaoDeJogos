@@ -109,7 +109,7 @@ namespace lista_aula
             DNode n = this.head;
             if (index == 0)
             {
-               this.head = new DNode(data, this.head, null);
+               this.AddFirst(data);
             }
             else
             {
@@ -117,7 +117,10 @@ namespace lista_aula
                {
                   n = n.Next;
                }
-               n.Next = new DNode(data, n.Next, n);
+               DNode newNode = new DNode(data, n.Next, n);;
+               n.Next = newNode;
+               (n.Next.Next).Previous = newNode;
+
             }
          }
       }
