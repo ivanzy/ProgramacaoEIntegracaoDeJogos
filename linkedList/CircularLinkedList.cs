@@ -2,31 +2,30 @@ using System;
 
 namespace lista_aula
 {
-   public class LinkedList
+   public class CircularLinkedList
    {
-      private Node head;
-
-      public LinkedList()
+      private Node tail;
+      public CircularLinkedList()
       {
-         this.head = null;
+         this.tail = null;
       }
 
       public bool Empty
       {
          get
          {
-            return (this.head == null);
+            return (this.tail == null);
          }
       }
-
       public int Count
       {
          get
          {
-            Node n = head;
-            if (n == null) return 0;
+            if (this.tail == null) return 0;
+            Node n = this.tail.Next;
+
             int i = 1;
-            while (n.Next != null)
+            while (n.Next != this.tail.Next)
             {
                n = n.Next;
                i++;
@@ -38,18 +37,18 @@ namespace lista_aula
       {
          if (index < 0)
             throw new ArgumentOutOfRangeException("negative index: " + index);
-         else if (index >= this.Count)
+         else if (index > this.Count)
             throw new ArgumentOutOfRangeException("Out of Bounds index: " + index);
          else
          {
-            Node n = this.head;
-            if (index == 0)
+            Node n = this.tail;
+            if (index == this.Count)
             {
-               this.head = new Node(data, this.head);
+               this.Add(data);
             }
             else
             {
-               for (int i = 0; i < index - 1; i++)
+               for (int i = 0; i <= index - 1; i++)
                {
                   n = n.Next;
                }
@@ -60,20 +59,22 @@ namespace lista_aula
 
       public void Add(object data)
       {
-         if (this.head == null)
+         if (this.tail == null)
          {
-            this.head = new Node(data, null);
+            Node firstNode = new Node(data, null);
+            firstNode.Next = firstNode;
+            this.tail = firstNode;
          }
          else
          {
-            Node n = this.head;
-            while (n.Next != null)
-               n = n.Next;
-            n.Next = new Node(data, n.Next);
+            Node newTail = new Node(data, this.tail.Next);
+            this.tail.Next = newTail;
+            this.tail = newTail;
+
          }
       }
-
-      public void Remove(int index)
+// Exercício
+ /*      public void Remove(int index)
       {
          if (index < 0)
             throw new ArgumentOutOfRangeException("negative index: " + index);
@@ -90,50 +91,55 @@ namespace lista_aula
                {
                   n = n.Next;
                }
-               // 0 -> 1-> 2 ->3
                n.Next = n.Next.Next;
             }
          }
 
-      }
+      } */
 
       public void printList()
       {
-         Node n = this.head;
-         while (n != null)
+         if (this.tail != null)
          {
-            Console.WriteLine(n.Data);
-            n = n.Next;
+            Node n = this.tail.Next;
+            do
+            {
+               Console.WriteLine(n.Data);
+               n = n.Next;
+            } while (n != this.tail.Next);
+            Console.WriteLine();
          }
-         Console.WriteLine();
       }
 
       public void Clear()
       {
-         this.head = null;
+         this.tail = null;
       }
 
       public bool Contains(object obj)
       {
-         Node n = this.head;
-         while (n != null)
+         if (this.tail == null) return false;
+         Node n = this.tail.Next;
+         do
          {
             if (n.Data.Equals(obj)) return true;
             n = n.Next;
-         }
+         } while (n != this.tail.Next);
          return false;
       }
 
       public int IndexOf(object obj)
       {
-         Node n = this.head;
+         Node n = this.tail.Next;
          int i = 0;
-         while (n != null)
+         if (n == null) return -1;
+
+         do
          {
             if (n.Data.Equals(obj)) return i;
             n = n.Next;
             i++;
-         }
+         } while (n != this.tail.Next);
          return -1;
       }
 
@@ -149,7 +155,7 @@ namespace lista_aula
             throw new ArgumentOutOfRangeException("Out of Bounds index: " + index);
          else
          {
-            Node n = this.head;
+            Node n = this.tail.Next;
             for (int i = 0; i < index; i++)
             {
                n = n.Next;
