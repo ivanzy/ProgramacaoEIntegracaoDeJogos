@@ -1,0 +1,4 @@
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/Stack.csprojAssemblyReference.cache
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/Stack.csproj.CoreCompileInputs.cache
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/Stack.AssemblyInfoInputs.cache
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/Stack.AssemblyInfo.cs

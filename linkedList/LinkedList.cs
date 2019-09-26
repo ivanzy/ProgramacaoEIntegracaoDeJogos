@@ -38,7 +38,7 @@ namespace lista_aula
       {
          if (index < 0)
             throw new ArgumentOutOfRangeException("negative index: " + index);
-         else if (index >= this.Count)
+         else if (index > this.Count)
             throw new ArgumentOutOfRangeException("Out of Bounds index: " + index);
          else
          {
@@ -62,14 +62,14 @@ namespace lista_aula
       {
          if (this.head == null)
          {
-            this.head = new Node(data, null);
+            this.head = new Node(data, this.head);
          }
          else
          {
             Node n = this.head;
             while (n.Next != null)
                n = n.Next;
-            n.Next = new Node(data, n.Next);
+            n.Next = new Node(data, null);
          }
       }
 
@@ -97,7 +97,7 @@ namespace lista_aula
 
       }
 
-      public void printList()
+      public void PrintList()
       {
          Node n = this.head;
          while (n != null)
@@ -150,12 +150,25 @@ namespace lista_aula
          else
          {
             Node n = this.head;
-            for (int i = 0; i < index; i++)
-            {
+            for (int i = 0; i < index; i++)     
                n = n.Next;
-            }
             return n.Data;
          }
+      }
+
+      
+
+      public bool HasCicle(){
+         if(this.Empty) return false;
+         Node fast = head.Next;
+         Node slow = this.head;
+         while(fast !=null && fast.Next!=null && slow!=null){
+            if(fast.Equals(slow)) return true;
+            fast = fast.Next.Next;
+            slow = slow.Next;
+         }
+         return false;
+         
       }
    }
 }

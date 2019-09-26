@@ -1,0 +1,11 @@
+/home/ivan/csharp/FMU/queue/obj/Debug/netcoreapp2.2/queue.csprojAssemblyReference.cache
+/home/ivan/csharp/FMU/queue/obj/Debug/netcoreapp2.2/queue.csproj.CoreCompileInputs.cache
+/home/ivan/csharp/FMU/queue/obj/Debug/netcoreapp2.2/queue.AssemblyInfoInputs.cache
+/home/ivan/csharp/FMU/queue/obj/Debug/netcoreapp2.2/queue.AssemblyInfo.cs
+/home/ivan/csharp/FMU/queue/bin/Debug/netcoreapp2.2/queue.deps.json
+/home/ivan/csharp/FMU/queue/bin/Debug/netcoreapp2.2/queue.runtimeconfig.json
+/home/ivan/csharp/FMU/queue/bin/Debug/netcoreapp2.2/queue.runtimeconfig.dev.json
+/home/ivan/csharp/FMU/queue/bin/Debug/netcoreapp2.2/queue.dll
+/home/ivan/csharp/FMU/queue/bin/Debug/netcoreapp2.2/queue.pdb
+/home/ivan/csharp/FMU/queue/obj/Debug/netcoreapp2.2/queue.dll
+/home/ivan/csharp/FMU/queue/obj/Debug/netcoreapp2.2/queue.pdb

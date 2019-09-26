@@ -1,0 +1,11 @@
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/AulaStack.csprojAssemblyReference.cache
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/AulaStack.csproj.CoreCompileInputs.cache
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/AulaStack.AssemblyInfoInputs.cache
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/AulaStack.AssemblyInfo.cs
+/home/ivan/csharp/FMU/Stack/bin/Debug/netcoreapp2.2/AulaStack.deps.json
+/home/ivan/csharp/FMU/Stack/bin/Debug/netcoreapp2.2/AulaStack.runtimeconfig.json
+/home/ivan/csharp/FMU/Stack/bin/Debug/netcoreapp2.2/AulaStack.runtimeconfig.dev.json
+/home/ivan/csharp/FMU/Stack/bin/Debug/netcoreapp2.2/AulaStack.dll
+/home/ivan/csharp/FMU/Stack/bin/Debug/netcoreapp2.2/AulaStack.pdb
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/AulaStack.dll
+/home/ivan/csharp/FMU/Stack/obj/Debug/netcoreapp2.2/AulaStack.pdb
